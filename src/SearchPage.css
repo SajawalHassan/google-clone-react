@@ -17,7 +17,7 @@
 
 .searchPage__headerBody > .search > .search__input {
   margin-top: 0;
-  width: 120vh;
+  width: 80vh;
   margin: unset;
   min-width: unset;
 }
@@ -51,4 +51,40 @@
 
 .searchPage__option a {
   margin-left: 5px;
+}
+
+.searchPage__resultCount {
+  color: #70757a;
+  font-size: 14px;
+}
+
+.searchPage__results {
+  min-width: 650px;
+  margin-top: 20px;
+  margin-left: 240px;
+  margin-bottom: 100px;
+}
+
+.searchPage__result {
+  margin: 40px 0;
+}
+
+.searchPage__resultImage {
+  object-fit: contain;
+  height: 20px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.searchPage__resultTitle > h2 {
+  color: #1a0dab;
+  font-weight: 500;
+}
+.searchPage__resultTitle,
+.searchPage__resultLink {
+  text-decoration: none;
+}
+
+.searchPage__resultSnippet {
+  color: rgb(73, 73, 73);
 }
