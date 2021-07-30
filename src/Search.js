@@ -44,7 +44,7 @@ function Search({ hideButtons = false }) {
           <Button type="submit" onClick={search} variant="outlined">
             Google Search
           </Button>
-          <Button variant="outlined">Google Search</Button>
+          <Button variant="outlined">Im Feeling Lucky</Button>
         </div>
       ) : (
         <div className="search__buttons">
@@ -57,7 +57,7 @@ function Search({ hideButtons = false }) {
             Google Search
           </Button>
           <Button className="search__buttonsHidden" variant="outlined">
-            Google Search
+            Im Feeling Lucky
           </Button>
         </div>
       )}
