@@ -1,3 +1,5 @@
+/* Header */
+
 .searchPage__header {
   display: flex;
   position: sticky;
@@ -52,6 +54,8 @@
 .searchPage__option a {
   margin-left: 5px;
 }
+
+/* Body */
 
 .searchPage__resultCount {
   color: #70757a;

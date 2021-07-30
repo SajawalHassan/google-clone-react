@@ -9,6 +9,7 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function Search({ hideButtons = false }) {
+  // eslint-disable-next-line
   const [{}, dispatch] = useStateValue();
 
   const [input, setInput] = useState("");
@@ -32,13 +33,14 @@ function Search({ hideButtons = false }) {
         <SearchIcon className="search__inputIcon" />
         <input
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)} // Keeping track of what user is typing the input
           type="text"
           placeholder="Search"
         />
         <MicIcon />
       </div>
 
+      {/* Saying that if the hidebutton is not passed do nothing */}
       {!hideButtons ? (
         <div className="search__buttons">
           <Button type="submit" onClick={search} variant="outlined">
@@ -47,6 +49,7 @@ function Search({ hideButtons = false }) {
           <Button variant="outlined">Im Feeling Lucky</Button>
         </div>
       ) : (
+        // If it is passed then hide the buttons (Doing this so we can reuse the search engine in the results page)
         <div className="search__buttons">
           <Button
             className="search__buttonsHidden"

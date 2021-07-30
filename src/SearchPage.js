@@ -2,6 +2,7 @@ import React from "react";
 import "./SearchPage.css";
 import Search from "./Search";
 import useGoogleSearch from "./useGoogleSearch";
+// eslint-disable-next-line
 import Response from "./response";
 
 import SearchIcon from "@material-ui/icons/Search";
@@ -14,9 +15,12 @@ import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
 
 function SearchPage() {
+  // eslint-disable-next-line
   const [{ term }, dispatch] = useStateValue();
+  // Live call API
   const { data } = useGoogleSearch(term);
 
+  // Mock data API
   // const data = Response;
 
   console.log(data);
@@ -32,8 +36,7 @@ function SearchPage() {
         </Link>
 
         <div className="searchPage__headerBody">
-          <Search hideButtons />
-
+          <Search hideButtons /> {/* Using the hidebuttons function */}
           <div className="searchPage__options">
             <div className="searchPage__optionsLeft">
               <div className="searchPage__option">
@@ -79,12 +82,14 @@ function SearchPage() {
         <div className="searchPage__results">
           <p className="searchPage__resultCount">
             About {data?.searchInformation.formattedTotalResults} results (
-            {data?.searchInformation.formattedSearchTime} seconds) for {term}
+            {data?.searchInformation.formattedSearchTime} seconds) for {term}{" "}
+            {/* Finding How many seconds it took to get how many results */}
           </p>
 
           {data?.items.map((item) => (
             <div className="searchPage__result">
               <a className="searchPage__resultLink" href={item.link}>
+                {/* Displaying the picture of the website/company */}
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
                     <img
